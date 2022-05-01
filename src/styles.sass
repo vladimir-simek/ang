@@ -1,38 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap"
 
-/*.bdm
+.bdm
   background-color: black
   width: 50px
   height: 50px
-/*.wdm
+.wdm
   background-color: lightblue
   width: 50px
   height: 50px
-/*.cdm
+.cdm
   background-color: green
   width: 50px
   height: 50px
+.white
+  tr:nth-child(odd)
+    td:nth-child(even)
+      background: darkslategrey
+    td:nth-child(odd)
+      background-color: white
+  tr:nth-child(even)
+    td:nth-child(even)
+      background: white
+    td:nth-child(odd)
+      background-color: darkslategrey
+  h2
+    color: black
 
-.first
-  background-color: ghostwhite
-  width: 50px
-  height: 50px
-.second
-  background-color: slategrey
-  width: 50px
-  height: 50px
-td
-  display: inline-flex
+.black
+  tr:nth-child(odd)
+    td:nth-child(even)
+      background: black
+    td:nth-child(odd)
+      background-color: darkslategrey
+  tr:nth-child(even)
+    td:nth-child(even)
+      background: darkslategrey
+    td:nth-child(odd)
+      background-color: black
+  h2
+    color: white
+
+.td
+  display: flex
   justify-content: center
-h2
-  color: black
+td
+  display: flex
+  justify-content: center
+  width: 50px
+  height: 50px
 .nigg
   display: flex
   justify-content: space-evenly
 .bdy
   display: flex
   justify-content: center
+  align-items: center
+  flex-direction: column
+  height: 90vh
 root
   background-color: #0006
 body

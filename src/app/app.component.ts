@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Chessboard';
   public themeType: string = "Dark mode"
   public type: boolean = true;
+  public wtf: boolean = true
 
   public positions: string[][] = [
     ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'],
@@ -21,45 +22,12 @@ export class AppComponent {
     ['♜', '♝', '♞', '♛', '♚', '♞', '♝', '♜'],
   ];
 
-  public changeTheme() {
-    if (this.type) {
+  changeTheme(){
+    if (this.wtf)
       this.themeType = "Light mode"
-      this.type = !this.type
-      let first = document.getElementsByTagName("td")
-      for (let i = 0; i < first.length; i++) {
-        if (first.item(i)!=null){
-          // @ts-ignore
-          if (first.item(i).className == "second"){
-            // @ts-ignore
-            first.item(i).style.backgroundColor = "grey"
-          } else{
-            // @ts-ignore
-            first.item(i).style.backgroundColor = "darkgrey"
-          }
-
-        }
-
-      }
-
-    } else {
+    else
       this.themeType = "Dark mode"
-      this.type = !this.type
-      let first = document.getElementsByTagName("td")
-      for (let i = 0; i < first.length; i++) {
-        if (first.item(i)!=null){
-          // @ts-ignore
-          if (first.item(i).className == "second"){
-            // @ts-ignore
-            first.item(i).style.backgroundColor = "slategrey"
-          } else{
-            // @ts-ignore
-            first.item(i).style.backgroundColor = "ghostwhite"
-          }
-
-        }
-
-      }
-    }
+    this.wtf = !this.wtf;
   }
 
   /*public text: string = "An infant is living his best life."

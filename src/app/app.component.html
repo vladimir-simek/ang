@@ -1,12 +1,14 @@
 <body>
 <div class="nigg">
 <h1>Chessboard</h1>
-<button (click)="changeTheme()" class="btn btn-primary">{{themeType}}</button>
+<button (click)="[changeTheme()]" class="btn btn-primary">{{themeType}}</button>
 </div>
 <div class="bdy">
-<table class="chessboard">
+<table [class.white]="wtf" [class.black]="!wtf" class="chessboard">
   <tr *ngFor="let prvek of positions; let i = index;">
-    <td [class.first]="(l + i) % 2 == 0" [class.second]="(l+ i) % 2 != 0" *ngFor="let prvek of positions[i]; let l = index"><h2>{{positions[i][l]}}</h2></td>
+    <div class="td">
+      <td [class.white]="(l + i) % 2 == 0 && wtf" [class.black]="(l+ i) % 2 != 0 && !wtf" *ngFor="let prvek of positions[i]; let l = index"><h2>{{prvek}}</h2></td>
+    </div>
   </tr>
 </table>
 </div>
